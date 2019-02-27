@@ -5,7 +5,7 @@ btcd-kube:
     namespace: lightning-kube-mainnet
     network: mainnet
     networkSuffix: -mainnet
-    storage: 25Gi
+    storage: 275Gi
     
   service:
     http:
