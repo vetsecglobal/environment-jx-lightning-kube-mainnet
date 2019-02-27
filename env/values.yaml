@@ -2,14 +2,19 @@ PipelineSecrets: {}
 
 btcd-kube:
   project:
-    namespace: lightning-kube-simnet
-    network: simnet
-    networkSuffix: -simnet
+    namespace: lightning-kube-mainnet
+    network: mainnet
+    networkSuffix: -mainnet
     storage: 25Gi
+    
   service:
-    externalPort: 18556
-    internalPort: 18556
-
+    http:
+      externalPort: 18555
+      internalPort: 18555
+    rpc:
+      externalPort: 18556
+      internalPort: 18556
+      
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
