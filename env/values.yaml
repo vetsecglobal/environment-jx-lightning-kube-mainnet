@@ -9,11 +9,11 @@ btcd-kube:
     
   service:
     http:
-      externalPort: 18555
-      internalPort: 18555
+      externalPort: 8333
+      internalPort: 8333
     rpc:
-      externalPort: 18556
-      internalPort: 18556
+      externalPort: 8334
+      internalPort: 8334
       
 cleanup:
   Annotations:
