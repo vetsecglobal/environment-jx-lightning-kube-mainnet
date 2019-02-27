@@ -12,6 +12,13 @@ btcd-kube:
     rpc:
       externalPort: 8334
       internalPort: 8334
+
+lnd-kube:
+  project:
+    namespace: lightning-kube-mainnet
+    network: mainnet
+    networkSuffix: -mainnet
+
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
