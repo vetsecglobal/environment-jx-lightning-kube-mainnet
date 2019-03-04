@@ -12,20 +12,6 @@ btcd-kube:
     rpc:
       externalPort: 8334
       internalPort: 8334
-
-lnd-kube:
-  project:
-    namespace: lightning-kube-mainnet
-    network: mainnet
-    networkSuffix: -mainnet
-  resources:
-    limits:
-      cpu: 400m
-      memory: 1024Mi
-    requests:
-      cpu: 400m
-      memory: 1024Mi
-
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
@@ -47,6 +33,18 @@ expose:
 jenkins:
   Servers:
     Global: {}
+lnd-kube:
+  project:
+    namespace: lightning-kube-mainnet
+    network: mainnet
+    networkSuffix: -mainnet
+  resources:
+    limits:
+      cpu: 400m
+      memory: 1024Mi
+    requests:
+      cpu: 400m
+      memory: 1024Mi
 project:
   namespace: btcd-kube
   network: mainnet
