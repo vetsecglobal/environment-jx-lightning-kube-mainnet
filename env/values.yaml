@@ -42,11 +42,11 @@ lnd-kube:
     networkSuffix: -mainnet
   resources:
     limits:
-      cpu: 400m
-      memory: 1024Mi
+      cpu: 100m
+      memory: 128Mi
     requests:
-      cpu: 400m
-      memory: 1024Mi
+      cpu: 100m
+      memory: 128Mi
 
 cleanup:
   Annotations:
