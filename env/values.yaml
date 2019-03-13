@@ -20,6 +20,14 @@ bitcoind-kube:
     networkSuffix: -mainnet
     storage: 5Gi
 
+  resources:
+    limits:
+      cpu: 100m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+
   configurationFile:
     bitcoin.conf: |-
       server=1
