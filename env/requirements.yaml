@@ -1,10 +1,10 @@
 dependencies:
 - name: btcd-kube
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.51
+  version: 0.0.60
 - name: bitcoind-kube
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.31
 - name: lnd-kube
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.19
+  version: 0.0.34
