@@ -1,4 +1,23 @@
 PipelineSecrets: {}
+bitcoind-kube:
+  configurationFile:
+    bitcoin.conf: |-
+      server=1
+      zmqpubrawblock=tcp://0.0.0.0:28332
+      zmqpubrawtx=tcp://0.0.0.0:28333
+      txindex=1
+  project:
+    namespace: lightning-kube-mainnet
+    network: mainnet
+    networkSuffix: -mainnet
+    storage: 275Gi
+  resources:
+    limits:
+      cpu: 200m
+      memory: 2048Mi
+    requests:
+      cpu: 200m
+      memory: 2048Mi
 btcd-kube:
   project:
     namespace: lightning-kube-mainnet
@@ -12,42 +31,6 @@ btcd-kube:
     rpc:
       externalPort: 8334
       internalPort: 8334
-
-bitcoind-kube:
-  project:
-    namespace: lightning-kube-mainnet
-    network: mainnet
-    networkSuffix: -mainnet
-    storage: 275Gi
-
-  resources:
-    limits:
-      cpu: 200m
-      memory: 2048Mi
-    requests:
-      cpu: 200m
-      memory: 2048Mi
-
-  configurationFile:
-    bitcoin.conf: |-
-      server=1
-      zmqpubrawblock=tcp://0.0.0.0:28332
-      zmqpubrawtx=tcp://0.0.0.0:28333
-      txindex=1
-
-lnd-kube:
-  project:
-    namespace: lightning-kube-mainnet
-    network: mainnet
-    networkSuffix: -mainnet
-  resources:
-    limits:
-      cpu: 400m
-      memory: 1024Mi
-    requests:
-      cpu: 400m
-      memory: 1024Mi
-
 cleanup:
   Annotations:
     helm.sh/hook: pre-delete
@@ -69,6 +52,18 @@ expose:
 jenkins:
   Servers:
     Global: {}
+lnd-kube:
+  project:
+    namespace: lightning-kube-mainnet
+    network: mainnet
+    networkSuffix: -mainnet
+  resources:
+    limits:
+      cpu: 400m
+      memory: 1024Mi
+    requests:
+      cpu: 400m
+      memory: 1024Mi
 project:
   namespace: btcd-kube
   network: mainnet
