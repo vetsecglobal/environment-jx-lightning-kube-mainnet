@@ -7,4 +7,4 @@ dependencies:
   version: 0.0.55
 - name: lnd-kube
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.57
+  version: 0.0.58
