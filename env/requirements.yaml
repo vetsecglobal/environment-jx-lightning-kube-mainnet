@@ -4,7 +4,7 @@ dependencies:
   version: 0.0.64
 - name: bitcoind-kube
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.56
+  version: 0.0.57
 - name: lnd-kube
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.61
