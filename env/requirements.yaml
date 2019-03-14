@@ -4,7 +4,7 @@ dependencies:
   version: 0.0.29
 - name: btcd-kube
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.34
+  version: 0.0.35
 - alias: expose
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
