@@ -5,7 +5,7 @@ bitcoind-kube:
       server=1
       zmqpubrawblock=tcp://0.0.0.0:28332
       zmqpubrawtx=tcp://0.0.0.0:28333
-      txindex=1
+      reindex-chainstate=1
   project:
     namespace: lightning-kube-mainnet
     network: mainnet
