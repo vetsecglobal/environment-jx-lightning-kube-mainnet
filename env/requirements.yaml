@@ -1,7 +1,7 @@
 dependencies:
 - name: bitcoind-kube
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.33
+  version: 0.0.35
 - name: btcd-kube
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.34
