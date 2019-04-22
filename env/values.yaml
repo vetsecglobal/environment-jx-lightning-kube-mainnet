@@ -6,7 +6,7 @@ bitcoind-kube:
       zmqpubrawblock=tcp://0.0.0.0:28332
       zmqpubrawtx=tcp://0.0.0.0:28333
       txindex=1
-      dbcache=1536Mi
+      dbcache=3072Mi
   project:
     namespace: lightning-kube-mainnet
     network: mainnet
@@ -14,11 +14,11 @@ bitcoind-kube:
     storage: 275Gi
   resources:
     requests:
-      cpu: 400m
-      memory: 2048Mi
+      cpu: 1000m
+      memory: 4096Mi
     limits:
-      cpu: 400m
-      memory: 2048Mi
+      cpu: 1000m
+      memory: 4096Mi
 btcd-kube:
   project:
     namespace: lightning-kube-mainnet
