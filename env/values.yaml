@@ -13,12 +13,12 @@ bitcoind-kube:
     networkSuffix: -mainnet
     storage: 275Gi
   resources:
-    limits:
-      cpu: 500m
-      memory: 3584Mi
     requests:
       cpu: 500m
-      memory: 3072Mi
+      memory: 2560Mi
+    limits:
+      cpu: 500m
+      memory: 2560Mi
 btcd-kube:
   project:
     namespace: lightning-kube-mainnet
