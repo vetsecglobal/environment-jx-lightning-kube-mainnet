@@ -14,11 +14,11 @@ bitcoind-kube:
     storage: 275Gi
   resources:
     limits:
-      cpu: 200m
-      memory: 2048Mi
+      cpu: 500m
+      memory: 4096Mi
     requests:
-      cpu: 200m
-      memory: 2048Mi
+      cpu: 500m
+      memory: 4096Mi
 btcd-kube:
   project:
     namespace: lightning-kube-mainnet
